@@ -4,7 +4,7 @@ const workoutReducer = (state, action) => {
       return {
         workouts: action.payload,
       };
-    case "CREATE WORKOUT": {
+    case "CREATE_WORKOUT": {
       return {
         workouts: [action.payload, ...state.workouts],
       };

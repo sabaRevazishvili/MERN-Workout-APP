@@ -1,5 +1,7 @@
 import React from "react";
 import { useWorkoutContext } from "../hooks/useWorkoutContext";
+import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
+import { Trash2 } from "lucide-react";
 
 const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutContext();
@@ -22,8 +24,12 @@ const WorkoutDetails = ({ workout }) => {
       <p>
         <strong>Reps:</strong> {workout.reps}
       </p>
-      <p>{workout.createdAt}</p>
-      <span onClick={handleClick}>Delete</span>
+      <p>
+        {formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}
+      </p>
+      <span onClick={handleClick}>
+        <Trash2 />
+      </span>
     </div>
   );
 };
