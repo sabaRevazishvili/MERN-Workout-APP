@@ -43,7 +43,7 @@ const WorkoutsForm = () => {
   return (
     <form className="create" onSubmit={handleSubmit}>
       <h3>Add a New Workout</h3>
-      <label>Exersice TItle:</label>
+      <label>Exersice Title:</label>
       <input
         type="text"
         onChange={(e) => {
@@ -70,7 +70,9 @@ const WorkoutsForm = () => {
         value={reps}
         className={emptyFields.includes("reps") ? "error" : ""}
       />
-      <button>Add Workout</button>
+      <button disabled={title === "" && load === "" && reps === ""}>
+        Add Workout
+      </button>
       {error && <div className="error">{error}</div>}
     </form>
   );

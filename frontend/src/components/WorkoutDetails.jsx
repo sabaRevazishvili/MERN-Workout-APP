@@ -22,6 +22,14 @@ const WorkoutDetails = ({ workout }) => {
     }
   };
   const handleEdit = async () => {
+    if (
+      title === workout.title &&
+      load == workout.load &&
+      reps == workout.reps
+    ) {
+      setEdit("");
+      return;
+    }
     const editedWorkout = { title, load, reps };
     const response = await fetch("/api/workouts/" + workout._id, {
       method: "PATCH",

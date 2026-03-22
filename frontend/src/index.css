@@ -1,6 +1,5 @@
 /* google font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* layout */
 :root {
   --primary: #1aac83;
@@ -9,7 +8,7 @@
 body {
   background: #f1f1f1;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Montserrat", sans-serif;
 }
 header {
   background: #fff;
@@ -76,29 +75,29 @@ header a {
 }
 
 .edit {
-  border: 1px solid #1aac83;
-  color: #1aac83;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
 .edit:hover {
-  background: #1aac83;
+  background: var(--primary);
   color: #fff;
 }
 
 .cancel {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid var(--error);
+  color: var(--error);
 }
 
 .cancel:hover {
-  background: red;
+  background: var(--error);
   color: #fff;
 }
 
 .btn {
   background: #fff;
   padding: 6px 12px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.8em;
@@ -127,9 +126,14 @@ form button {
   border: 0;
   color: #fff;
   padding: 10px;
-  font-family: "Poppins";
+  font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   cursor: pointer;
+}
+
+form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 div.error {
   padding: 10px;
