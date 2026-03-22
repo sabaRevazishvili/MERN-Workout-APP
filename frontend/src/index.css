@@ -67,6 +67,47 @@ header a {
   color: #333;
 }
 
+.btn-grp {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-direction: row;
+  gap: 20px;
+}
+
+.edit {
+  border: 1px solid #1aac83;
+  color: #1aac83;
+}
+
+.edit:hover {
+  background: #1aac83;
+  color: #fff;
+}
+
+.cancel {
+  border: 1px solid red;
+  color: red;
+}
+
+.cancel:hover {
+  background: red;
+  color: #fff;
+}
+
+.btn {
+  background: #fff;
+  padding: 6px 12px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: inline-block;
+}
+
 /* new workout form */
 label,
 input {
