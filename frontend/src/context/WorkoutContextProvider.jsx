@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { WorkoutContext } from "./WorkoutContext";
+import { WorkoutContext } from "./context";
 import workoutReducer from "./WorkoutReducer";
 
 const WorkoutContextProvider = ({ children }) => {
